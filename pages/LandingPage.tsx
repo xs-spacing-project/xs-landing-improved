@@ -11,7 +11,6 @@ import {
   Zap,
   Clock,
   ShieldCheck,
-  Users,
   Plus,
   Minus,
   Star,
@@ -410,7 +409,7 @@ const FaqItem: React.FC<{
 };
 
 const FaqSection: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
     <section id="faq" className="py-20 sm:py-32">
       <div className="max-w-3xl mx-auto px-4">
