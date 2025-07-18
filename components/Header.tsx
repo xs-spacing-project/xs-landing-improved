@@ -48,13 +48,13 @@ const Header: React.FC<HeaderProps> = ({ isLandingPage }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 flex justify-center py-3 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 flex justify-center py-2 transition-all duration-300 ${
         isScrolled ? "pt-3" : "pt-6"
       }`}
     >
       <div className="flex items-center justify-between w-full max-w-6xl px-4">
         {/* Logo Capsule */}
-        <div className="bg-white/5 dark:bg-black/5 backdrop-blur-lg rounded-full shadow-lg border border-black/10 dark:border-white/10">
+        <div className="bg-black/5 dark:bg-white/5 backdrop-blur-lg rounded-full shadow-lg border border-black/10 dark:border-white/10">
           <Link
             to="/"
             onClick={(e) => {
@@ -63,7 +63,7 @@ const Header: React.FC<HeaderProps> = ({ isLandingPage }) => {
                 .querySelector("#home")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="flex items-center justify-center px-6 py-2"
+            className="flex items-center justify-center px-6 py-1.5"
           >
             {/* Using a standard font to approximate 'Atlyp BL Extra Bold Italic' */}
             <span className="text-2xl font-extrabold italic text-brand-dark dark:text-brand-light">
@@ -74,7 +74,7 @@ const Header: React.FC<HeaderProps> = ({ isLandingPage }) => {
 
         {/* Navigation Capsule */}
         {isLandingPage && (
-          <nav className="hidden md:flex bg-white/5 dark:bg-black/5 backdrop-blur-lg rounded-full p-2 shadow-lg border border-black/10 dark:border-white/10">
+          <nav className="hidden md:flex bg-black/5 dark:bg-white/5 backdrop-blur-lg rounded-full p-2 shadow-lg border border-black/10 dark:border-white/10">
             <ul className="flex items-center space-x-1">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -114,7 +114,7 @@ const Header: React.FC<HeaderProps> = ({ isLandingPage }) => {
         )}
 
         {/* Action Buttons Capsule */}
-        <div className="flex items-center space-x-2 bg-white/5 dark:bg-black/5 backdrop-blur-lg rounded-full p-1.5 shadow-lg border border-black/10 dark:border-white/10">
+        <div className="flex items-center space-x-2 bg-black/5 dark:bg-white/5 backdrop-blur-lg rounded-full p-1.5 shadow-lg border border-black/10 dark:border-white/10">
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full text-brand-secondary hover:text-brand-dark dark:hover:text-brand-light transition-colors"
